@@ -56,7 +56,7 @@ export const config: TConfig = {
     h2: "Contato.",
     form: {
       name: {
-        span: "Rafael Duarte",
+        span: "Seu Nome",
         placeholder: "Qual é o seu nome?",
       },
       email: { span: "Seu Email", placeholder: "Qual é o seu email?" },
