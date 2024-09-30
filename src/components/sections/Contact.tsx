@@ -7,6 +7,7 @@ import { SectionWrapper } from "../../hoc";
 import { slideIn } from "../../utils/motion";
 import { config } from "../../constants/config";
 import { Header } from "../atoms/Header";
+import swal from 'sweetalert';
 
 const INITIAL_STATE = Object.fromEntries(
   Object.keys(config.contact.form).map((input) => [input, ""])
@@ -36,6 +37,12 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
+    if(form.name === "" || form.email === "" || form.message === "") {
+      setLoading(false);
+      swal("Ops!", "Por favor preencha todos os campos.", "error");
+      return;
+    }
+
     emailjs
       .send(
         emailjsConfig.serviceId,
@@ -52,7 +59,7 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert("Valeu! Irei te retornar em breve.");
+          swal("Mensagem enviada com sucesso!", "Obrigado por entrar em contato, retornarei em breve.", "success");
 
           setForm(INITIAL_STATE);
         },
@@ -60,7 +67,7 @@ const Contact = () => {
           setLoading(false);
 
           console.log(error);
-          alert("Algo deu errado.");
+          swal("Ops!", "Algo deu errado ao enviar a mensagem, por favor tente novamente.", "error");
         }
       );
   };

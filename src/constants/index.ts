@@ -17,11 +17,11 @@ import {
   reactjs,
   mongodb,
   git,
-  meta,
-  tesla,
-  carrent,
-  jobit,
-  tripguide,
+  bizlogo,
+  sclogo,
+  scembedded,
+  bizvision,
+  isp4app,
 } from "../assets";
 
 export const navLinks: TNavLink[] = [
@@ -93,7 +93,7 @@ const experiences: TExperience[] = [
   {
     title: "Lead Developer Fullstack",
     companyName: "BizVision Tech",
-    icon: meta,
+    icon: bizlogo,
     iconBg: "#252525",
     date: "Agosto 2024 - Atualmente",
     points: [
@@ -108,7 +108,7 @@ const experiences: TExperience[] = [
   {
     title: "Lead Developer Fullstack",
     companyName: "Soares Consulting",
-    icon: tesla,
+    icon: sclogo,
     iconBg: "#252525",
     date: "Jan 2024 - Atualmente",
     points: [
@@ -156,7 +156,7 @@ const projects: TProject[] = [
         color: "green-text-gradient",
       },
     ],
-    image: carrent,
+    image: scembedded,
     sourceCodeLink: "https://portaldataholds.com/",
   },
   {
@@ -173,7 +173,7 @@ const projects: TProject[] = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
+    image: bizvision,
     sourceCodeLink: "https://bizvisiontech.com/",
   },
   {
@@ -194,7 +194,7 @@ const projects: TProject[] = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: isp4app,
     sourceCodeLink: "",
   },
 ];
