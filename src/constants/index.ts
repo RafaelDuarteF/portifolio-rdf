@@ -22,6 +22,7 @@ import {
   scembedded,
   bizvision,
   isp4app,
+  figma,
 } from "../assets";
 
 export const navLinks: TNavLink[] = [
@@ -86,6 +87,10 @@ const technologies: TTechnology[] = [
   {
     name: "Git",
     icon: git,
+  },
+  {
+    name: "Figma",
+    icon: figma,
   },
 ];
 
