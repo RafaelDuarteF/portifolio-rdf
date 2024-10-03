@@ -43,6 +43,8 @@ const Contact = () => {
       return;
     }
 
+    console.log("Nome:" + form.name + "\nEmail:" + form.email + "\nMensagem:" + form.message);
+
     emailjs
       .send(
         emailjsConfig.serviceId,

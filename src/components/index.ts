@@ -13,6 +13,8 @@ import Experience from "./sections/Experience";
 import Works from "./sections/Works";
 import Feedbacks from "./sections/Feedbacks";
 import Contact from "./sections/Contact";
+import Footer from "./sections/Footer";
+import ProjectDetails from "./sections/ProjectDetails";
 import CanvasLoader from "./layout/Loader";
 
 export {
@@ -29,4 +31,6 @@ export {
   BallCanvas,
   ComputersCanvas,
   StarsCanvas,
+  Footer,
+  ProjectDetails,
 };

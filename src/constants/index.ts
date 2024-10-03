@@ -7,6 +7,8 @@ import type {
   TProject,
 } from "../types";
 
+import imageYago from '../assets/company/yago_soares.jfif';
+
 import {
   mobile,
   backend,
@@ -134,16 +136,16 @@ const testimonials: TTestimonial[] = [
     name: "Yago Soares",
     designation: "CEO",
     company: "Soares Consulting",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQE7gVBI460org/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1678372039827?e=1733356800&v=beta&t=H3SoTHkuC0Zkfep9VYvOFnCqCoB6gOKnESI5_ZtEKwk",
+    image: imageYago,
   },
 ];
 
 const projects: TProject[] = [
   {
     name: "SCTech Embedded",
-    description:
-      "Plataforma baseada na web que permite a empresas organizarem a visualização de seus dashboards em Power BI dentro da plataforma, para seus usuários finais. A plataforma é personalizada para cada cliente, permitindo a adição de logotipos, cores e temas personalizados.",
-    tags: [
+    detailedDescription: "O projeto foi desenvolvido para a empresa Soares Consulting e atualmente utilizada por mais de 5 empresas. O mesmo foi desenvolvido com as tecnologias: Laravel, MySQL, React, PowerBI API, Firebase Hosting e Cloudflare.",
+    description: "Plataforma baseada na web que permite a empresas organizarem a visualização de seus dashboards em Power BI dentro da plataforma, para seus usuários finais. A plataforma é personalizada para cada cliente, permitindo a adição de logotipos, cores e temas personalizados.",
+      tags: [
       {
         name: "react",
         color: "blue-text-gradient",
@@ -166,8 +168,8 @@ const projects: TProject[] = [
   },
   {
     name: "BizVision Tech",
-    description:
-      "Website para informatização da empresa BizVision, com o objetivo de apresentar seus serviços e produtos, além de permitir a solicitação de orçamentos e contato direto com a empresa.",
+    detailedDescription: "O projeto foi desenvolvido para a empresa americana BizVision Tech. O mesmo foi desenvolvido com as tecnologias: React, SCSS e Firebase Hosting.",
+    description: "Website para informatização da empresa BizVision, com o objetivo de apresentar seus serviços e produtos, além de permitir a solicitação de orçamentos e contato direto com a empresa.",
     tags: [
       {
         name: "react",
@@ -183,6 +185,7 @@ const projects: TProject[] = [
   },
   {
     name: "ISP4pp",
+    detailedDescription: "O projeto foi desenvolvido para a empresa ISP4pp. O mesmo foi desenvolvido com as tecnologias: React Native, PHP e Styled Components.",
     description:
       "Aplicativo mobile para visualização de dados de provedores de internet, com o objetivo de facilitar a visualização de dados de clientes, contratos e financeiro (principais KPI's). Além da visualização de alertas críticos da companhia.",
     tags: [

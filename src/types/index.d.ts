@@ -19,6 +19,7 @@ export type TTestimonial = {
 } & Required<Pick<TCommonProps, "name">>;
 
 export type TProject = {
+  detailedDescription: string;
   description: string;
   tags: {
     name: string;

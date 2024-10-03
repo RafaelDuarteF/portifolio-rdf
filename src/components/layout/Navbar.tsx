@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import { styles } from "../../constants/styles";
 import { navLinks } from "../../constants";
@@ -10,6 +10,7 @@ const Navbar = () => {
   const [active, setActive] = useState<string | null>();
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation(); // Hook para obter a localização atual
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,6 +49,13 @@ const Navbar = () => {
     };
   }, []);
 
+  // Efeito para scroll para 0 quando a rota for /projects
+  useEffect(() => {
+    if (location.pathname === "/projects/0" || location.pathname === "/projects/1" || location.pathname === "/projects/2") {
+      window.scrollTo(0, 0);
+    }
+  }, [location.pathname]);
+
   return (
     <nav
       className={`${
@@ -78,7 +86,7 @@ const Navbar = () => {
                 active === nav.id ? "text-white" : "text-secondary"
               } cursor-pointer text-[18px] font-medium hover:text-white`}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              <a href={`http://localhost:5173#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
         </ul>
@@ -107,7 +115,7 @@ const Navbar = () => {
                     setToggle(!toggle);
                   }}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  <a href={`http://localhost:5173#${nav.id}`}>{nav.title}</a>
                 </li>
               ))}
             </ul>
