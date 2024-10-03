@@ -4,8 +4,9 @@ import { projects } from "../../constants";
 const ProjectDetails = () => {
   const { id } = useParams<{ id: string }>(); // Captura o parâmetro da URL
   const navigate = useNavigate(); // Hook para navegação
-  const project = projects[parseInt(id)]; // Encontra o projeto baseado no ID da URL
-
+  const projectId = id ? parseInt(id) : -1; // Define um valor padrão inválido (-1) caso id seja undefined
+  const project = projects[projectId]; // Encontra o projeto baseado no ID da URL
+  
   if (!project) {
     return <div className="text-center text-white mt-10">Projeto não encontrado!</div>;
   }
