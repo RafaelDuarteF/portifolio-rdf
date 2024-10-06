@@ -16,14 +16,12 @@ import { useEffect } from "react";
 import { config } from "./constants/config";
 
 const Layout = () => {
-  const location = useLocation(); // Agora o useLocation está dentro do BrowserRouter
+  const location = useLocation();
 
-  // Condição para verificar se a rota atual é a de projetos
   const isProjectDetailsPage = location.pathname.includes("/projects/");
 
   return (
     <div className="bg-primary relative z-0">
-      {/* Renderiza Hero e Navbar apenas se NÃO estiver na página de detalhes do projeto */}
       {!isProjectDetailsPage && (
         <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat">
           <Navbar />
@@ -49,6 +47,7 @@ const Layout = () => {
             </>
           }
         />
+        
         {/* Rota para exibir os detalhes do projeto */}
         <Route path="/projects/:id" element={
           <div className="relative z-0">

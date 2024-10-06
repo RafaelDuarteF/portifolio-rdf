@@ -10,7 +10,7 @@ const Navbar = () => {
   const [active, setActive] = useState<string | null>();
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const location = useLocation(); // Hook para obter a localização atual
+  const location = useLocation(); 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,7 +49,6 @@ const Navbar = () => {
     };
   }, []);
 
-  // Efeito para scroll para 0 quando a rota for /projects/id
   useEffect(() => {
     if (location.pathname === "/projects/0" || location.pathname === "/projects/1" || location.pathname === "/projects/2") {
       window.scrollTo(0, 0);
