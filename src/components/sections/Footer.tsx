@@ -1,10 +1,10 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Footer = () => {
   return (
     <footer className="text-white py-6">
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="container mx-auto flex justify-between items-center footer-container">
         <div className="text-center">
           <p className="text-sm">© {new Date().getFullYear()} Rafael Duarte de Freitas. Todos os direitos reservados.</p>
         </div>

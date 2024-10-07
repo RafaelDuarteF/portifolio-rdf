@@ -13,6 +13,13 @@
   color-scheme: dark;
 }
 
+@media screen and (max-width: 780px) {
+  .footer-container {
+      flex-direction: column;
+      gap: 30px;
+  }
+}
+
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;
