@@ -6,9 +6,9 @@ const Footer = () => {
     <footer className="text-white py-6">
       <div className="container mx-auto flex justify-between items-center footer-container">
         <div className="text-center">
-          <p className="text-sm">© {new Date().getFullYear()} Rafael Duarte de Freitas. Todos os direitos reservados.</p>
+          <p className="text-sm ml-10 name-term">© {new Date().getFullYear()} Rafael Duarte de Freitas. Todos os direitos reservados.</p>
         </div>
-        <div className="flex space-x-4">
+        <div className="flex space-x-4 mr-10 icons-redes">
           <a
             href="https://github.com/RafaelDuarteF"
             target="_blank"
