@@ -85,7 +85,7 @@ const Navbar = () => {
                 active === nav.id ? "text-white" : "text-secondary"
               } cursor-pointer text-[18px] font-medium hover:text-white`}
             >
-              <a href={`http://localhost:5173#${nav.id}`}>{nav.title}</a>
+              <a href={`https://rdf-portifolio.vercel.app/#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
         </ul>
